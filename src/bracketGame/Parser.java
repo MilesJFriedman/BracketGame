@@ -24,14 +24,14 @@ public class Parser {
 		
 		//Create a string to hold each line of the HTML code that is read in.
 		String inputLine;
-		//int start = 0;
-		//int end = 0;
-		while ((inputLine = in.readLine()) != null)
-			//System.out.println(inputLine.substring(inputLine.lastIndexOf("<dl>"), inputLine.indexOf("</dl>")));
-			//start = inputLine.indexOf("<dl>");
-			//end = inputLine.indexOf("</dl>");
-			//System.out.println(start);
-			System.out.println(inputLine);
+		//int start = -1;
+		//int end = -1;
+		while ((inputLine = in.readLine()) != null) {
+			if (inputLine.indexOf("<dl>") > -1) {
+			System.out.println(inputLine.substring(inputLine.indexOf("<dl>"), inputLine.lastIndexOf("</dl>")));
+			//System.out.println(inputLine);
+			}//end if statement
+		}//end while
 			
 	}
 
