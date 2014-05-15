@@ -24,6 +24,12 @@ public class Matchup {
 	}//constructor
 	
 	public String determineWinner () {
-		
+		if (this.team1Wins == 4)
+			this.winner = team1.getName();
+		else if (this.team2Wins == 4)
+			this.winner = team2.getName();
+		else
+			this.winner = "Series Currently In Progress.";
+		return winner;
 	}//end determineWinner
 }
